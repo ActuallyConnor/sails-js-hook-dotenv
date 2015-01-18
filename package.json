@@ -1,0 +1,19 @@
+{
+  "name": "sails-hook-dotenv",
+  "version": "0.1.0",
+  "description": "Sails hook to run dotenv",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "sails": {
+    "isHook": true
+  },
+  "author": "Daniel Tait",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^2.1.0",
+    "sails": "^0.11.0",
+    "should": "^4.6.0"
+  }
+}

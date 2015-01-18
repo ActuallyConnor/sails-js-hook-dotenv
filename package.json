@@ -1,15 +1,27 @@
 {
   "name": "sails-hook-dotenv",
   "version": "0.1.0",
-  "description": "Sails hook to run dotenv",
+  "description": "Sails.js hook for running dotenv",
   "main": "index.js",
+  "keywords": [
+  	"sails",
+  	"sailsjs",
+  	"sails.js",
+  	".env",
+  	"dotenv",
+  	"hook",
+  	"environment"
+  ],
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha"
   },
   "sails": {
     "isHook": true
   },
-  "author": "Daniel Tait",
+  "author": {
+  	"name": "Daniel Tait",
+  	"email": "dantait91@gmail.com"
+  },
   "license": "MIT",
   "devDependencies": {
     "mocha": "^2.1.0",
@@ -22,5 +34,9 @@
   "bugs": {
     "url": "https://github.com/Taiters/sails-hook-dotenv/issues"
   },
-  "homepage": "https://github.com/Taiters/sails-hook-dotenv"
+  "homepage": "https://github.com/Taiters/sails-hook-dotenv",
+  "repository": {
+  	"type": "git",
+  	"url": "https://github.com/Taiters/sails-hook-dotenv.git"
+  }
 }

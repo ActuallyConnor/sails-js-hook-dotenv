@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/Taiters/sails-hook-dotenv.svg?branch=master)](https://travis-ci.org/Taiters/sails-hook-dotenv)
 [![npm version](https://badge.fury.io/js/sails-hook-dotenv.svg)](http://badge.fury.io/js/sails-hook-dotenv)
 
-[Sails JS](http://sailsjs.org) hook to load environment variables from a `.env` file using [dotenv](https://github.com/bkeepers/dotenv)
+[Sails JS](http://sailsjs.org) hook to load environment variables from a `.env` file using [dotenv](https://github.com/motdotla/dotenv)
 
 ### Installation
 

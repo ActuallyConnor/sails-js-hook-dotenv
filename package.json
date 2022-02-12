@@ -1,5 +1,5 @@
 {
-    "name": "@actuallyconnor/sails-hook-dotenv",
+    "name": "sails-js-hook-dotenv",
     "version": "1.0.0",
     "description": "Sails.js hook for loading .env files",
     "main": "index.js",

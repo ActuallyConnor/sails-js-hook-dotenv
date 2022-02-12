@@ -1,6 +1,6 @@
 {
     "name": "sails-js-hook-dotenv",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Sails.js hook for loading .env files",
     "main": "index.js",
     "keywords": [
@@ -32,11 +32,11 @@
         "dotenv": "^16.0.0"
     },
     "bugs": {
-        "url": "https://github.com/ActuallyConnor/sails-hook-dotenv/issues"
+        "url": "https://github.com/ActuallyConnor/sails-js-hook-dotenv/issues"
     },
-    "homepage": "https://github.com/ActuallyConnor/sails-hook-dotenv",
+    "homepage": "https://github.com/ActuallyConnor/sails-js-hook-dotenv",
     "repository": {
         "type": "git",
-        "url": "https://github.com/ActuallyConnor/sails-hook-dotenv"
+        "url": "https://github.com/ActuallyConnor/sails-js-hook-dotenv"
     }
 }

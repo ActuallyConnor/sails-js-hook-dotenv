@@ -1,32 +1,39 @@
-dotenv = require('dotenv');
+dotenv = require('dotenv')
 
-module.exports = function(sails) {
+module.exports = function (sails) {
 
   return {
 
     defaults: {
-
       __configKey__: {
-
-        active: true
-      }
+        active: true,
+        throwOnFailure: true,
+      },
     },
 
-    initialize: function(cb) {
+    initialize: function (cb) {
+      if (!sails.config[this.configKey].active) {
+        sails.log.verbose('Dotenv hook deactivated.')
 
-      if (!sails.config[ this.configKey ].active) {
-
-        sails.log.verbose('Dotenv hook deactivated.');
-        return cb();
-
+        return cb()
       }
 
-      dotenv.config();
+      const result = dotenv.config()
 
-      return cb();
+      // dotenv config failed to load
+      if (result.error) {
 
+        if (sails.config[this.configKey].throwOnFailure) {
+          throw result.error
+        } else {
+          sails.config[this.configKey].active = false
+          sails.log.verbose('Dotenv hook deactivated.')
+        }
+
+        return cb()
+      }
+
+      return cb()
     },
-
-  };
-
-};
+  }
+}

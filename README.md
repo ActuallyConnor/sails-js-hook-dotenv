@@ -15,3 +15,9 @@ Start sails as you normally do (`sails lift`) and you will be able to access you
 ### Configuration
 
 You can add configuration options for this hook in `config/dotenv.js` by default. Currently, the only option is a boolean: `active`. Setting this to false will disable this hook.
+
+### Testing
+
+Copy the `.env.example` file to create a new `.env` file.
+
+Then run `npm run test` in your terminal.

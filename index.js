@@ -21,7 +21,7 @@ module.exports = function(sails) {
 
       }
 
-      dotenv.load();
+      dotenv.config();
 
       return cb();
 

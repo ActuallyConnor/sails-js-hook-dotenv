@@ -1,42 +1,42 @@
 {
-  "name": "sails-hook-dotenv",
-  "version": "0.1.1",
-  "description": "Sails.js hook for loading .env files",
-  "main": "index.js",
-  "keywords": [
-  	"sails",
-  	"sailsjs",
-  	"sails.js",
-  	".env",
-  	"dotenv",
-  	"hook",
-  	"environment"
-  ],
-  "scripts": {
-    "test": "./node_modules/mocha/bin/mocha"
-  },
-  "sails": {
-    "isHook": true
-  },
-  "author": {
-  	"name": "Daniel Tait",
-  	"email": "dantait91@gmail.com"
-  },
-  "license": "MIT",
-  "devDependencies": {
-    "mocha": "^2.1.0",
-    "sails": "^0.11.0",
-    "should": "^4.6.0"
-  },
-  "dependencies": {
-    "dotenv": "^0.4.0"
-  },
-  "bugs": {
-    "url": "https://github.com/Taiters/sails-hook-dotenv/issues"
-  },
-  "homepage": "https://github.com/Taiters/sails-hook-dotenv",
-  "repository": {
-  	"type": "git",
-  	"url": "https://github.com/Taiters/sails-hook-dotenv.git"
-  }
+    "name": "sails-hook-dotenv",
+    "version": "1.0.0",
+    "description": "Sails.js hook for loading .env files",
+    "main": "index.js",
+    "keywords": [
+        "sails",
+        "sailsjs",
+        "sails.js",
+        ".env",
+        "dotenv",
+        "hook",
+        "environment"
+    ],
+    "scripts": {
+        "test": "./node_modules/mocha/bin/mocha"
+    },
+    "sails": {
+        "isHook": true
+    },
+    "author": {
+        "name": "Connor Smyth",
+        "email": "connorsmyth@rogers.com"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "mocha": "^9.2.0",
+        "sails": "^1.5.2",
+        "should": "^4.6.0"
+    },
+    "dependencies": {
+        "dotenv": "^16.0.0"
+    },
+    "bugs": {
+        "url": "https://github.com/ActuallyConnor/sails-hook-dotenv/issues"
+    },
+    "homepage": "https://github.com/ActuallyConnor/sails-hook-dotenv",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ActuallyConnor/sails-hook-dotenv"
+    }
 }

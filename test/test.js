@@ -1,57 +1,42 @@
-var Sails = require('sails').Sails;
-should = require('should');
+const Sails = require('sails').Sails
+should = require('should')
 
-describe('Sails Hook Dotenv', function() {
+describe('Sails Hook Dotenv', function () {
 
-	var sails;
+  let sails
 
-	before(function (done) {
+  before(function (done) {
 
-		this.timeout(11000);
+    this.timeout(11000)
 
-		Sails().lift({
+    Sails().lift({
+      hooks: {
+        'dotenv': require('../'),
+        'grunt': false,
+      },
+      log: {
+        level: 'error',
+      },
+    }, function (err, _sails) {
 
-			hooks: {
+      if (err) return done(err)
+      sails = _sails
 
-				"dotenv": require('../'),
+      return done()
+    })
+  })
 
-				"grunt": false
-			},
+  after(function (done) {
+    return sails ? sails.lower(done) : done()
+  })
 
-			log: {
+  it('sails does not crash', function () {
+    return true
+  })
 
-				level: "error"
+  it('env vars are loaded from .env file', function () {
+    let val = process.env.test_hit
+    val.should.eql('foo bar')
+  })
 
-			}
-
-		},function (err, _sails) {
-
-			if (err) return done(err);
-			sails = _sails;
-			return done();
-
-		});
-	});
-
-	after(function (done) {
-
-		if (sails) {
-			return sails.lower(done);
-		}
-		return done();
-
-	});
-
-	it ('sails does not crash', function() {
-		return true;
-	});
-
-	it ('env vars are loaded from .env file', function() {
-
-		val = process.env.test_hit;
-
-		val.should.eql('foo bar');
-
-	});
-
-});
+})

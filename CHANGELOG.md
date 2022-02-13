@@ -26,8 +26,16 @@
 
 #### 1.0.3
 
-* Removing dependency on should package by @ActuallyConnor in https://github.com/ActuallyConnor/sails-js-hook-dotenv/pull/4
-* Fixing README.md by @ActuallyConnor in https://github.com/ActuallyConnor/sails-js-hook-dotenv/pull/3
-* Migrating to ES6 syntax by @ActuallyConnor in https://github.com/ActuallyConnor/sails-js-hook-dotenv/pull/5
+-Removing dependency on should package by @ActuallyConnor in https://github.com/ActuallyConnor/sails-js-hook-dotenv/pull/4
+-Fixing README.md by @ActuallyConnor in https://github.com/ActuallyConnor/sails-js-hook-dotenv/pull/3
+-Migrating to ES6 syntax by @ActuallyConnor in https://github.com/ActuallyConnor/sails-js-hook-dotenv/pull/5
 
 **Full Changelog**: https://github.com/ActuallyConnor/sails-js-hook-dotenv/compare/1.0.2...1.0.3
+
+#### 1.0.4
+
+- Updating testing strategy to match other hook testing strategies by @ActuallyConnor in https://github.com/ActuallyConnor/sails-js-hook-dotenv/pull/7
+- Adding GitHub workflow by @ActuallyConnor in https://github.com/ActuallyConnor/sails-js-hook-dotenv/pull/8
+
+
+**Full Changelog**: https://github.com/ActuallyConnor/sails-js-hook-dotenv/compare/1.0.3...1.0.4

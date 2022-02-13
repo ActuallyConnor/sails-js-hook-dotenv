@@ -39,3 +39,10 @@
 
 
 **Full Changelog**: https://github.com/ActuallyConnor/sails-js-hook-dotenv/compare/1.0.3...1.0.4
+
+### 1.1.0
+
+- Adding new config options
+- Adding new tests for new config options
+
+**Full Changelog**: https://github.com/ActuallyConnor/sails-js-hook-dotenv/compare/1.0.4...1.1.0

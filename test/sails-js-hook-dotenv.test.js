@@ -19,7 +19,7 @@ describe('Sails Hook Dotenv', () => {
       },
       loadHooks: ['dotenv'],
       log: {
-        level: 'error',
+        level: 'silent',
       },
     }, () => {
       defaults = app.config.dotenv

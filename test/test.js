@@ -1,15 +1,18 @@
 const Sails = require('sails').Sails
+const _ = require('@sailshq/lodash');
 const assert = require('assert')
 
 describe('Sails Hook Dotenv', () => {
 
   let app
+  let defaults
 
   before(done => {
 
     app = new Sails()
 
     app.load({
+      globals: false,
       hooks: {
         'dotenv': require('../'),
         'grunt': false,
@@ -18,15 +21,23 @@ describe('Sails Hook Dotenv', () => {
       log: {
         level: 'error',
       },
-    }, done)
+    }, () => {
+      defaults = app.hooks.dotenv.defaults.dotenv
+
+      return done()
+    })
   })
 
   after(done => {
-    return app ? app.lower(done) : done()
+    app.lower(done)
   })
 
-  it('sails does not crash', () => {
-    return true
+  it('should have initialize the dotenv hook', () => {
+    assert(app.hooks.dotenv)
+  })
+
+  it('should have dotenv throwOnFailure be set to true', () => {
+    assert(_.isBoolean(defaults.throwOnFailure))
   })
 
   it('env vars are loaded from .env file', () => {

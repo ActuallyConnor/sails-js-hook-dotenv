@@ -1,35 +1,28 @@
 const Sails = require('sails').Sails
 const assert = require('assert')
 
-describe('Sails Hook Dotenv', function () {
+describe('Sails Hook Dotenv', () => {
 
-  let sails
+  let app
 
   before(done => {
 
-    this.timeout(11000)
+    app = new Sails()
 
-    Sails().lift({
+    app.load({
       hooks: {
         'dotenv': require('../'),
         'grunt': false,
       },
+      loadHooks: ['dotenv'],
       log: {
         level: 'error',
       },
-    }, (err, _sails) => {
-      if (err) {
-        return done(err)
-      }
-
-      sails = _sails
-
-      return done()
-    })
+    }, done)
   })
 
   after(done => {
-    return sails ? sails.lower(done) : done()
+    return app ? app.lower(done) : done()
   })
 
   it('sails does not crash', () => {

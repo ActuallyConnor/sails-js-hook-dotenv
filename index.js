@@ -1,6 +1,6 @@
 dotenv = require('dotenv')
 
-module.exports = function (sails) {
+module.exports = sails => {
 
   return {
 

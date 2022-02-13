@@ -5,7 +5,7 @@ describe('Sails Hook Dotenv', function () {
 
   let sails
 
-  before(function (done) {
+  before(done => {
 
     this.timeout(11000)
 
@@ -17,26 +17,27 @@ describe('Sails Hook Dotenv', function () {
       log: {
         level: 'error',
       },
-    }, function (err, _sails) {
+    }, (err, _sails) => {
+      if (err) {
+        return done(err)
+      }
 
-      if (err) return done(err)
       sails = _sails
 
       return done()
     })
   })
 
-  after(function (done) {
+  after(done => {
     return sails ? sails.lower(done) : done()
   })
 
-  it('sails does not crash', function () {
+  it('sails does not crash', () => {
     return true
   })
 
-  it('env vars are loaded from .env file', function () {
-    let val = process.env.test_hit
-    assert.equal(val, 'foo bar')
+  it('env vars are loaded from .env file', () => {
+    assert.equal(process.env.test_hit, 'foo bar')
   })
 
 })

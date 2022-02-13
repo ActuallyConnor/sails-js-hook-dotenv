@@ -1,6 +1,6 @@
 {
     "name": "sails-js-hook-dotenv",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Sails.js hook for loading .env files",
     "main": "index.js",
     "keywords": [

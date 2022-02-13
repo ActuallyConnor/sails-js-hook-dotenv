@@ -1,5 +1,5 @@
 const Sails = require('sails').Sails
-should = require('should')
+const assert = require('assert')
 
 describe('Sails Hook Dotenv', function () {
 
@@ -36,7 +36,7 @@ describe('Sails Hook Dotenv', function () {
 
   it('env vars are loaded from .env file', function () {
     let val = process.env.test_hit
-    val.should.eql('foo bar')
+    assert.equal(val, 'foo bar')
   })
 
 })

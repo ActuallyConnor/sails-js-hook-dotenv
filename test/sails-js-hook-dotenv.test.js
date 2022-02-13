@@ -22,7 +22,7 @@ describe('Sails Hook Dotenv', () => {
         level: 'error',
       },
     }, () => {
-      defaults = app.hooks.dotenv.defaults.dotenv
+      defaults = app.config.dotenv
 
       return done()
     })

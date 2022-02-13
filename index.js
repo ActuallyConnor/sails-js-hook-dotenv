@@ -18,13 +18,19 @@ module.exports = sails => {
         return cb()
       }
 
-      const result = dotenv.config()
+      const config = {}
+
+      if (sails.config[this.configKey].path !== undefined) {
+        config['path'] = sails.config[this.configKey].path
+      }
+
+      const result = dotenv.config(config)
 
       // dotenv config failed to load
       if (result.error) {
 
         if (sails.config[this.configKey].throwOnFailure) {
-          throw result.error
+          throw new Error('dotenv hook failed to load')
         } else {
           sails.config[this.configKey].active = false
           sails.log.verbose('Dotenv hook deactivated.')

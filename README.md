@@ -5,7 +5,7 @@ using [dotenv](https://github.com/motdotla/dotenv)
 
 ### Installation
 
-`npm install sails-hook-dotenv`
+`npm install sails-js-hook-dotenv`
 
 ### Usage
 

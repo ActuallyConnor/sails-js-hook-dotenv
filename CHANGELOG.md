@@ -46,3 +46,11 @@
 - Adding new tests for new config options
 
 **Full Changelog**: https://github.com/ActuallyConnor/sails-js-hook-dotenv/compare/1.0.4...1.1.0
+
+### 1.1.1
+
+- Changing npm install instruction in readme by @leilohh in https://github.com/ActuallyConnor/sails-js-hook-dotenv/pull/12
+- Lowering app after each config test by @ActuallyConnor in https://github.com/ActuallyConnor/sails-js-hook-dotenv/pull/13
+
+**Full Changelog**: https://github.com/ActuallyConnor/sails-js-hook-dotenv/compare/1.1.0...1.1.1
+

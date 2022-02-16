@@ -2,9 +2,10 @@ const Sails = require('sails').Sails
 const assert = require('assert')
 
 describe('Sails Hook Dotenv - Failure', () => {
-  const app = new Sails()
 
-  it('should throw error on failure to load dotenv', function () {
+  it('should throw error on failure to load dotenv', function (done) {
+    const app = new Sails()
+
     app.load({
       globals: false,
       hooks: {
@@ -25,9 +26,13 @@ describe('Sails Hook Dotenv - Failure', () => {
         throw new Error('It should throw error when dotenv fails to load')
       }
     })
+
+    app.lower(done)
   })
 
-  it('should now throw error on failure to load dotenv', function () {
+  it('should now throw error on failure to load dotenv', function (done) {
+    const app = new Sails()
+
     app.load({
       globals: false,
       hooks: {
@@ -46,9 +51,13 @@ describe('Sails Hook Dotenv - Failure', () => {
       // verify no error thrown
       assert.equal(error, null)
     })
+
+    app.lower(done)
   })
 
-  it('should read based on the encoding', function () {
+  it('should read based on the encoding', function (done) {
+    const app = new Sails()
+
     app.load({
       globals: false,
       hooks: {
@@ -66,9 +75,13 @@ describe('Sails Hook Dotenv - Failure', () => {
       // verify no error thrown
       assert.equal(error, null)
     })
+
+    app.lower(done)
   })
 
-  it('should not read when incorrect encoding', function () {
+  it('should not read when incorrect encoding', function (done) {
+    const app = new Sails()
+
     app.load({
       globals: false,
       hooks: {
@@ -89,5 +102,7 @@ describe('Sails Hook Dotenv - Failure', () => {
         throw new Error('It should throw error when dotenv fails to load')
       }
     })
+
+    app.lower(done)
   })
 })

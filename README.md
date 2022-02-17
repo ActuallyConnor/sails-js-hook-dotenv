@@ -14,8 +14,7 @@ using `process.env.your-variable-name`
 
 ### Configuration
 
-You can add configuration options for this hook in `config/dotenv.js` by default. Currently, the only option is a
-boolean: `active`. Setting this to false will disable this hook.
+You can add configuration options for this hook in `config/dotenv.js` by default.
 
 ```js
 module.exports.dotenv = {

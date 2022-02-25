@@ -59,3 +59,10 @@
 - Fixing readme configuration block by @ActuallyConnor in https://github.com/ActuallyConnor/sails-js-hook-dotenv/pull/15
 
 **Full Changelog**: https://github.com/ActuallyConnor/sails-js-hook-dotenv/compare/1.1.1...1.1.2
+
+#### 1.1.3
+
+- Updating Mocha dependency by @ActuallyConnor in https://github.com/ActuallyConnor/sails-js-hook-dotenv/pull/17
+- 1.1.3 by @ActuallyConnor in https://github.com/ActuallyConnor/sails-js-hook-dotenv/pull/18
+
+**Full Changelog: 1.1.2...1.1.3**
